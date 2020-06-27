@@ -10,10 +10,10 @@ bigNumber.rebalanceDigitArray = function(digits, index){
     index = index || 0;
     var digit = digits[index];
     while(digit > 9){
-        //Update the current index
+       
         digits[index] = digit % 10;
         
-        //Update the next index
+        
         index++;
         digits[index] = digit = (digits[index] || 0) + ((digit - digit % 10) / 10);
     }
